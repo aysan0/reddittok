@@ -2,18 +2,6 @@
 
 Reddit post to tiktok
 
-Activate venv
-
-```
-source reddittok-venv/bin/activate
-```
-
-deactivate
-
-```
-deactivate
-```
-
 Install requirements.txt:
 
 ```

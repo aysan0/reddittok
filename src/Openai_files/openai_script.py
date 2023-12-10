@@ -1,7 +1,8 @@
-from src.Openai.openai import OpenAI
-from ..Reddit.utils import readOpenAIConfig
+from utils import readOpenAIConfig
+from opeanai import OpenAI
 
-class opean_ai():
+
+class opean_ai_class():
   def __init__(self) -> None:
     pass
 
@@ -16,7 +17,7 @@ class opean_ai():
     completion = client.chat.completions.create(
       model="gpt-3.5-turbo",
       messages=[
-        {"role": "system", "content": "You are a creative video script generator. Create a concise YouTube Shorts/TikTok video text from the following Reddit post:"},
+        {"role": "system", "content": "You are a creative video script generator. Create a concise YouTube Shorts/TikTok video text from the following text pulled from a Reddit post:"},
         {"role": "user", "content": reddit_text}
       ]
     )
@@ -28,5 +29,5 @@ class opean_ai():
 Json_obj_test = {
   "data": "TIL director Michel Gondry found Jim Carrey's emotional state after a breakup \"so beautiful, so broken\" that he asked him to stay that way for one year to fit his character in Eternal Sunshine of the Spotless Mind"
 }
-opean_ai_class = opean_ai()
-opean_ai_class.text_to_tiktok_text(Json_obj_test)
+op_class = opean_ai_class()
+op_class.text_to_tiktok_text(Json_obj_test)
